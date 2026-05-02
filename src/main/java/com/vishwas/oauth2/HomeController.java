@@ -1,5 +1,6 @@
 package com.vishwas.oauth2;
 
+import com.vishwas.oauth2.annotation.MyCustomAnnotation;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
     @GetMapping("/")
+    @MyCustomAnnotation
     public String home() {
         return "index";
     }
